@@ -58,18 +58,12 @@ Module.register("MMM-SimplePollen", {
 			var pollen = pollenInfos[i];
 			var pollenRow = document.createElement("tr");
 			var pollenName = document.createElement("td");
-			
-			if(pollen.category) {
-				pollenName.innerHTML = pollen.displayName + " : " + pollen.category;
-			} else {
-				pollenName.innerHTML = pollen.displayName;
-			}
-			
+			pollenName.innerHTML = pollen.displayName + " : " + pollen.indexInfo.category;
 			pollenRow.appendChild(pollenName);
 			pollenWrapper.appendChild(pollenRow);
 		}
 
-		return pollenWrapper.innerHTML;
+		return pollenWrapper.outerHTML;
 	},
 
 	getPollenData: function () {
