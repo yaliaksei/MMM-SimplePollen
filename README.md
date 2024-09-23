@@ -1,4 +1,4 @@
-# MMM-SimpleRPollen
+# MMM-SimplePollen
 MagicMirror module to display pollen information
 
 ## Installation
@@ -22,11 +22,14 @@ Add following module configuration in config.js
 ```
 ...
 {
-	module: "MMM-SimplePollen",
-	position: "top_left", // any position of your choice
-	config: {
-		// ...
-	}
-},
+			module: "MMM-SimplePollen",
+			position: "top_left", // any poisition of your choice
+			config: {
+				apiKey: "actual_api_key", // Get API key for Pollen API from Google Console
+				latitude: XX.xx, // actual latitude
+				longitude: YY.yy, // actual longitude
+				days: 1, // forecast days, now ignored
+			}
+		},
 ...
 ```
